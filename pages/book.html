@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+<title>Shift-Cycle The World</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="../css/default.css" rel="stylesheet" type="text/css">
+    <link href="../css/phone.css" rel="stylesheet" type="text/css" media="screen and (max-width:568px)">
+    <link href="../css/tablet.css" rel="stylesheet" type="text/css" media="screen and (min-width:569px) and (max-width:768px)">
+    <link href="../css/desktop.css" rel="stylesheet" type="text/css" media="screen and (min-width:769px)">
+</head>
+
+<body>
+<div class="wrapper">
+  <header class="menu">
+   <div class="menu-wrap">
+       <a href="../index.html"><picture>
+           <source 
+    srcset="../images/logo.png"
+    media="(min-width: 968px)"
+  />
+           <source 
+    srcset="../images/shift-gear.png"
+    media="(min-width: 568px)"
+  />
+           <img class="logo-img"
+    src="../images/shift-gear.png" 
+    alt="Shift Logo"
+  />
+       </picture>
+       </a>
+           <input type="checkbox" id="checkbox">
+       <nav class="nav">
+           <ul><li><a href="../index.html">Home</a></li>
+               <li><a href="../pages/destinations.html">Destinations</a></li>
+               <li><a href="../pages/about.html">Why Us</a></li>
+               <li><a href="../pages/style.html">Travel Styles</a></li>
+               <li><a href="../pages/blog.html">Blog</a></li>
+               <li><a href="../pages/book.html">Book Now</a></li>
+           </ul>
+       </nav>
+       <div class="box1"><p class="shift-travel">SHIFT TRAVEL</p>
+      </div>
+      <label for="checkbox">
+        <i class="fa fa-bars menu-icon"></i>
+       </label>
+      </div>
+    </header>
+        
+    <div class="headline">
+            <div itemscope itemtype="https://schema.org/LocalBusiness">
+                <span itemprop="telephone">
+                    <a class="phone" href="tel:(720)-636-4059">CLICK TO CALL</a>
+                </span>
+            </div>
+            <h1>Book Your Getaway Now</h1>
+           
+            <div id="book-top-img"><picture>
+                    <source srcset="../images/beach.jpg" media="(min-width:968px)"/>
+                    <source srcset="../images/beach750.jpg" media="(min-width:568px)"/>
+                    <img src="../images/beach550.jpg"  alt="France"/>
+                </picture>
+            
+                <p>From the sunny countryside of Madrid to the windswept beaches of Normandy, our biking trips are greatly enhanced by all the little things that make travel so vivid. The fresh scent of lavender fields on a long downhill slope. The buttery flavor of  freshly baked bread from the village patisserie. And each day will bring unforgettable meals of classic and inventive local fare and earthy, flavorful wines.</p>
+    </div>
+    </div>
+            
+    <div class="main">
+        <form id="form">
+            <h2 id="form-head">BOOK WITH US</h2>
+          <fieldset id="t-type">
+                    <ul id="t-type-pick">
+                <li><label for="trip-type">Guided</label>
+                <input type="radio" id="guided" name="trip-type" value="guided"></li>
+                <li><label for="trip-type">Semi-Guided</label>
+                <input type="radio" id="semiguide" name="trip-type" value="semiguided"></li>
+                <li>
+<input type="radio" id="solo" name="trip-type" value="solo"></li>
+                <label for="trip-type">Solo</label>
+                <li><label for="trip-type">Pro-Tour</label>
+                <input type="radio" id="pro" name="trip-type" value="pro"></li>
+                        </ul><br>
+            <label for="t-name">Tour Name:</label> 
+                <input type="text" id="t-name" name="t-name" value="">
+            </fieldset>
+            <fieldset id="name">
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" value=""><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value=""><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email" value="">
+            </fieldset>
+            <fieldset id="per-info">
+                <label for="depart-f">Depart From:</label>
+                <input type="text" id="depart-f" name="depart-f" value=""><br>
+                 <label for="depart-d">Departure Date:</label>
+                <input type="text" id="depart-d" name="depart-d" value=""><br>
+                <label for="arrive-a">Arrive At:</label>
+                <input type="text" id="arrive-a" name="arrive-a" value="">
+                 <label for="arrive-d">Arrival Date:</label>
+                <input type="text" id="arrive-d" name="arrive-d" value=""><br>
+                <label for="adult">Adult <small>(18-65)</small></label>
+                <select id="adults" name="adults">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <label for="seniors">Seniors<small>(65+)</small></label>
+                <select id="seniors" name="seniors">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <label for="children">Children<small>(12-18)</small></label>
+                <select id="children" name="children">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </fieldset>
+        </form>
+    </div>
+    </div>
+    
+    <div class="sub-container">
+        <form action="/action_page.php">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+  
+    <footer>
+  <div class="card">
+      <h3>Follow Me</h3>
+      <p class="blog-subtitle">Find More of My Work at These Links</p>
+    </div>
+        
+        <ul class="social-buttons" id="demo1">
+            <li><a href="https://www.linkedin.com/in/josh-chinchen-7997378a" class="linkedin"><img src="../images/In-2C-48px-R.jpg" alt="linkedin"></a></li>
+            <li><a href="https://pin.it/1OaygzO" class="pinterest"><img src="../images/pint-50px.jpg" alt="pinterest"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCFIFsrSrW1hfkKHuDa4h4dw" class="youtube"><img src="../images/youtube-social-red.jpg" alt="youtube"></a></li>
+            <li><a href="https://www.behance.net/DesignDrip" class="behance"><img src="../images/behance.jpg" alt="behance"></a></li>
+        </ul>
+        
+        <p class="copyright">Copyright 2021, Shift-Travel The World. All rights reserved 2021 ya fithy animals</p>
+        
+    </footer>
+
+    </body>
+    </html>

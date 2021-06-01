@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* css reset to neutralize inconsistencies across browsers */
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, img, article, aside, figcaption, figure, footer, header, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, figcaption, figure, footer, header, nav, section {
+	display: block;
+}
+body {
+    font-family: "Oswald", "Helvetica", "Arial", sans-serif;
+	font-size: 1em;
+	color: #000;
+	background-color: #fff;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+#wrapper {
+	background-color: #fff;
+}
+p {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#followme {
+}

@@ -1,0 +1,543 @@
+@charset "UTF-8";
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Oswald Bold', 'Oswald Light', 'Oswald Regular', 'Helvetica', 'sans-serif';
+}
+
+.body {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Oswald Bold", "Oswald Light", 'Oswald';
+}
+
+p {
+    display: inline-block;
+    text-decoration: none;
+    color: #003366;
+    font-family: "Oswald Bold", "Oswald Light", 'Oswald', 'Helvetica', sans-serif;
+    font-weight: lighter;
+}
+
+p.shift-travel {
+    color: white;
+    letter-spacing: 2px;
+}
+
+p.copyright {
+    margin: 0 1rem;
+}
+
+/*headlines across all pages*/
+.headline{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:flex-start;
+    align-content: center;
+    align-items: center;
+    margin: 1em;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald' , 'Helvetica', 'sans-serif';
+    font-weight: normal;
+    border-bottom: 1px solid #D7580D;
+}
+
+h1 {
+    display: block;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald' , 'Helvetica', 'sans-serif';
+    font-size: 3em;
+    font-weight: lighter;
+    text-align: center;
+    color: #003366;
+    padding: .5em 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h2{
+    Display: block;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
+    font-weight: normal;
+    color: black;
+    margin: 0 0 1em 0;  
+}
+
+h2.sub-title {
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
+    color: #003366;
+}
+
+h3{
+    Display: block;
+    text-align: center;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
+    font-weight: bold;
+    color: #003366;
+    margin: 0 0 1em 0;
+}
+
+h3.follow-me {
+    margin: 1em auto 0 auto;
+}
+
+h4{
+    Display: block;
+    text-align: center;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
+    font-weight: bold;
+    color: #003366;
+    margin: 0 0 1em 0;
+}
+
+h5 {
+    Display: block;
+    text-align: center;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
+    font-weight: normal;
+    color: #003366;
+    margin: 0 0 1em 0;
+}
+
+div.head-box2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: baseline;
+    margin-bottom: 1em;
+}
+
+div.card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) and (max-width: 500000px) {
+        h1.title-desktop { display: block; }  /* show it on small screens */
+ }
+ @media screen and (min-width: 0px) and (max-width: 768px) {
+    h1.title-desktop { display: none; }   /* hide it elsewhere */
+  }
+
+/*----------orange buttons----------*/
+.button {
+    display: block;
+    text-decoration: none;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald' , 'Helvetica', 'sans-serif';
+    font-weight: normal;
+    color: white;
+    background-color: #ff9933;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.button {
+    border-radius: 6px;
+}
+
+a.button:hover, a.button:focus{
+    color: #973901;
+}
+a.button.button1 {
+    margin: 0;
+    padding: .5em;
+}
+
+a.button.button2 {
+    margin: 0 auto;
+    padding: .5em;
+    width: 10em;
+}
+
+/*----------nav and hamburger menu----------*/
+header {
+    position: sticky;
+    top: 0;
+    background: lightblue;
+    height: 70px;
+    background-color: #002244;
+    padding: 10px 0;
+}
+
+div.menu-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+div.title-tablet-phone {
+    display: block;
+    font-weight: lighter;
+    font-size: 2em;
+}
+
+.menu-icon {
+   font-size: 2.4em;
+   color: #ffffff;
+   line-height: 50px;
+}
+
+.nav {
+    position: absolute;
+    background-color: #003366;
+    top: 68px;
+    left: 0;
+    width: 50%;
+}
+
+.nav ul {
+    list-style-type: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: checked;
+}
+
+.nav ul li {
+   padding: 0 1.8em;
+}
+
+.nav ul li a {
+   display: inline-block;
+   padding: 12px;
+   color: #DAE1E7;
+   text-decoration: none;
+   letter-spacing: 0.08em;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald' , 'Helvetica', 'sans-serif';
+    font-weight: lighter;
+}
+
+.nav ul li a:hover, nav ul li a:focus {
+    color: #eb6f4a;
+}
+
+.mobile-menu-class ul li {
+ -webkit-transform: translateZ(0);
+    transform: none;
+}
+
+#checkbox {
+   display: none;
+}
+
+#checkbox:checked ~ nav ul {
+   max-height: 400px;
+   padding: 15px 0;
+   transition: all 0.5s;
+}
+
+#menu {
+    background-color:#003366;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+i.fa.fa-bars.menu-icon {
+    margin-right: 1rem;
+}
+
+/*----------telephone link----------*/
+a[href^="tel"] {
+  color: #003366;
+  text-decoration: none;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald' , 'Helvetica', 'sans-serif';
+    font-weight: bold;
+}
+
+/*main body with tour photos, articles, and blogs*/
+.main {
+    padding: 2px;
+    margin: 0 1em;
+    background-color: white;
+}
+
+.responsive:hover {
+    -webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+    filter: blur(4px);
+}
+
+.tours {
+    margin: 1em 0;
+    padding: .5em;
+    border: 1px solid #D7580D;
+    border-radius: 6px;
+}
+
+.location {
+    color: #003366;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald Regular', 'Helvetica', 'sans-serif';
+    font-weight: bold;
+    float: left;
+    padding-left: .5em;
+    margin: .5em 0;
+}
+
+.price {
+    color: #003366;
+    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald Regular', 'Helvetica', 'sans-serif';
+    font-weight: normal;
+    float: right;
+    padding-right: .5em;
+    margin: .5em 0;
+}
+
+/*----------Booking form----------*/
+#form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    border: 2px solid #ff9933;
+    border-radius: 6px;
+}
+
+#form-head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ff9933;
+    height: 3em;
+    width: auto;
+    color: #003366;
+    font-family: "Oswald Bold", "Oswald Light", Oswald, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+#t-type {
+    display: inline;
+    align-items: center;
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+#t-type-pick {
+    list-style-type: none;
+    display: list-item;
+    color: #003366;
+    font-family: "Oswald Bold", "Oswald Light", Oswald, Helvetica, sans-serif;
+    text-align: left;
+    font-weight: lighter;
+}
+
+#guided {
+    float: right;
+}
+#semiguide {
+    float: right;
+}
+#solo {
+    float: right;
+}
+#pro {
+    float: right;
+}
+#t-name {
+    display: block;
+    height: 3em;
+    padding: .5em;
+    float: right;
+}
+
+#name {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-content: center;
+    padding: 1em;
+}
+
+#fname {
+    display: block;
+    height: 3em;
+    padding: .5em;
+}
+
+#lname {
+    display: block;
+    height: 3em;
+    padding: .5em;
+}
+
+#email {
+    display: block;
+    height: 3em;
+    padding: .5em;
+}
+
+#per-info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: .5em;
+}
+
+#depart-f {
+    height: 3em;
+    padding: .5em;
+}
+
+#depart-d {
+    height: 3em;
+    padding: .5em;
+}
+
+#arrive-a {
+    height: 3em;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+#arrive-d {
+    height: 3em;
+    padding: .5em;
+}
+
+#adults {
+    height: 3em;
+    padding: .5em;
+}
+
+#seniors {
+    height: 3em;
+    padding: .5em;
+}
+
+#children {
+    height: 3em;
+    padding: .5em;
+}
+
+label {
+
+    color: #003366;
+    font-family: "Oswald Bold", "Oswald Light", Oswald, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.sub-container {
+    display: block;
+    size: auto;
+    margin: 2em;
+}
+
+.sub-container form input[type="submit"] {
+    display: block;
+    font-family: "Oswald Bold", "Oswald Light", Oswald , Helvetica, "sans-serif";
+    color: white;
+    font-size: 1.5em;
+    margin: 0 auto;
+    background-color: #ff9933;
+    width: 80vw;
+    height: 2em;
+    border-radius: 6px;
+    letter-spacing: 2px;
+}
+
+.sub-container:hover form input[type="submit"] {
+    color: #973901;
+}
+
+/*----------end of booking form----------*/
+
+/*----------Blog styling----------*/
+
+.blog
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/*images*/
+.blogimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*responsive*/
+@media screen and (max-width: 600px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*----------Footer----------*/
+.social-buttons {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 1em;
+}
+
+ul.social-buttons {
+    margin: 1em 0;
+}
+
+.linkedin {
+    margin: 1em;
+}
+
+.linkedin:hover, .linkedin:focus {
+    opacity: 80%;
+} 
+.pinterest {
+    margin: 1em;
+}
+
+.pinterest:hover, .pinterest:focus {
+    opacity: 50%;
+}
+
+.youtube {
+    margin: 1em;
+}
+
+.youtube:hover, .youtube:focus {
+    opacity: 50%;
+}
+
+.behance {
+    margin: 1em;
+}
+
+.behance:hover, .behance:focus {
+    opacity: 50%;
+}
+
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+
+}
+footer.copyright {
+    font-size: .75rem;
+    color: #003366;
+}
