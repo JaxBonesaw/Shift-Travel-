@@ -26,6 +26,7 @@ p {
     color: #003366;
     font-family: "Oswald Bold", "Oswald Light", 'Oswald', 'Helvetica', sans-serif;
     font-weight: lighter;
+    margin: 1rem;
 }
 
 p.shift-travel {

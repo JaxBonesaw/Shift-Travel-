@@ -9,6 +9,11 @@
 .body {
     overflow: hidden;
 }
+.grid {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
 
 a {
     text-decoration: none;
@@ -21,6 +26,7 @@ p {
     color: #003366;
     font-family: "Oswald Bold", "Oswald Light", 'Oswald', 'Helvetica', sans-serif;
     font-weight: lighter;
+    margin: 1rem;
 }
 
 p.shift-travel {
@@ -30,6 +36,10 @@ p.shift-travel {
 
 p.copyright {
     margin: 0 1rem;
+}
+
+p#destination-content {
+    text-align: center;
 }
 
 /*headlines across all pages*/
@@ -109,6 +119,11 @@ div.head-box2 {
     align-items: baseline;
     margin-bottom: 1em;
 }
+div.before-column-box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
 
 div.card {
     display: flex;
@@ -122,6 +137,12 @@ div.card {
  @media screen and (min-width: 0px) and (max-width: 768px) {
     h1.title-desktop { display: none; }   /* hide it elsewhere */
   }
+
+.column2 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
 
 /*----------orange buttons----------*/
 .button {
