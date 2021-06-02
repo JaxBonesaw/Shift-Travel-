@@ -142,6 +142,7 @@ div.card {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
+    margin: 1rem;
 }
 
 /*----------orange buttons----------*/
@@ -488,9 +489,7 @@ label {
 
 /*images*/
 .blogimg {
-  background-color: #aaa;
   width: 100%;
-  padding: 20px;
 }
 
 /* Clear floats after the columns */

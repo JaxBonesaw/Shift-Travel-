@@ -376,7 +376,7 @@ a, a:hover, a:focus, a:active {
 }
 
 p {
-    display: inline-block;
+    display: inline;
     color: #003366;
     font-family: "Oswald Bold", "Oswald Light", 'Oswald', 'Helvetica', sans-serif;
     font-weight: lighter;
@@ -600,6 +600,7 @@ a.button:hover, a.button:focus{
     height: 100%;
     background-color: #003366;
     border-left: 1em solid white;
+    border-top: 1em solid white;
 }
 
 
