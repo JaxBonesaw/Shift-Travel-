@@ -342,16 +342,20 @@ template {
 }
 
 /*--------------Start of my code--------------*/
-/*Grid box*/
+* {
+  box-sizing: border-box;
+}
+/*----------Main Grid box-----------*/
 
 .grid {
     display: grid;
-    grid-row-gap: 2em;
+    grid-row-gap: 1em;
     grid-column-gap: 1em;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 200px .10fr 1fr;
     grid-template-columns: 300px 1fr;
     grid-template-areas:
-        "header header"
+        "side header"
+        "side content"
         "side main";
     margin: 0;
     height: 100vh;
@@ -376,31 +380,31 @@ p {
     color: #003366;
     font-family: "Oswald Bold", "Oswald Light", 'Oswald', 'Helvetica', sans-serif;
     font-weight: lighter;
-    margin: 1em 1em;
+    margin: 1rem 1rem;
+    padding: 1rem;
 }
 
 p.blog-subtitle {
   margin: 0;
 }
 
+p#destination-content {
+  font-family: "Oswald Bold", "Oswald Light", 'Oswald', 'Helvetica', sans-serif;
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+
 .headline { 
-    position: fixed;
-    height: 200px;
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-        "top top"
-        "bottom bottom";
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-around;
     width: 100%;
-    margin-bottom: 1em;
 }
 
 .head-box1 {
-    grid-area: top;
     display: block;
     text-align: center;
+    align-items: baseline;
 }
 
 div.head-box1 {
@@ -408,27 +412,110 @@ div.head-box1 {
 }
 
 .head-box2 {
-    grid-area: bottom;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    display: block;
     align-items: baseline;
 }
 
 div.head-box2 {
-  height: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
 }
 
 .phone {
   color: #003366;
-  font-size: 1.5em;
-  margin-left: 4em;
-  
+  font-size: 1.5em; 
 }
 
 .phone:hover, .phone:focus {
     color: #D7580D;
 }
+
+h1 {
+  font-family: "Oswald Bold", "Oswald Light", Oswald;
+  color: #003366;
+  font-weight: lighter;
+  font-size: 3em;
+  text-align: center;
+}
+
+h1.title-desktop {
+border-bottom: 1px solid #D7580D;
+left: 12.5%;
+right: 12.5%;
+margin-top: 1em 0 .5rem 0;
+}
+
+h2{
+  Display: block;
+  font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
+  font-weight: normal;
+  color: black;
+}
+
+h2.sub-title {
+font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
+color: #003366;
+margin-top: .5rem;
+}
+
+h3{
+  Display: block;
+  text-align: center;
+  font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
+  font-weight: bold;
+  color: #003366;
+}
+
+h4{
+  Display: block;
+  text-align: center;
+  font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
+  font-weight: bold;
+  color: #003366;
+  margin: 0 0 1em 0;
+}
+
+h5 {
+  Display: block;
+  text-align: center;
+  font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
+  font-weight: normal;
+  color: #003366;
+  margin: 0 0 1em 0;
+}
+
+.before-column-box {
+  grid-area: content;
+  padding: 1rem;
+  margin: 1em 1em 1em 0;
+  border-radius: 6px;
+  text-align: center;
+}
+
+#destination-content {
+  border-bottom: 1px solid #D7580D;
+}
+
+.column2 {
+  display: block;
+  grid-area: main;
+  font-family: "Oswald Bold", "Oswald Light", 'Oswald';
+  color: #003366;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-bottom: 1em;
+}
+
+.card {
+  display: block;
+}
+
+.main {
+  margin: 0 auto;
+}
+
 /*----------Buttons----------*/
 
 .button {
@@ -442,7 +529,6 @@ div.head-box2 {
 
 a.button.button1 {
   padding: .5em 1em;
-  margin-right: 1em;
 }
 
 a.button.button2 {
@@ -456,72 +542,7 @@ a.button:hover, a.button:focus{
       font-weight: bold;
 }
 
-h1 {
-    font-family: "Oswald Bold", "Oswald Light", Oswald;
-    color: #003366;
-    font-weight: lighter;
-    font-size: 3em;
-}
 
-h1.title-desktop {
-  border-bottom: 1px solid #D7580D;
-  position: absolute;
-  left: 12.5%;
-  right: 12.5%;
-}
-
-h2{
-    Display: block;
-    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
-    font-weight: normal;
-    color: black;
-    margin: 0 0 1em 0;  
-}
-h2.sub-title {
-  margin-top: 3em;
-  font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
-  color: #003366;
-}
-
-h3{
-    Display: block;
-    text-align: center;
-    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
-    font-weight: bold;
-    color: #003366;
-}
-
-h4{
-    Display: block;
-    text-align: center;
-    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
-    font-weight: bold;
-    color: #003366;
-    margin: 0 0 1em 0;
-}
-
-h5 {
-    Display: block;
-    text-align: center;
-    font-family: 'Oswald Bold', 'Oswald Light', 'Oswald';
-    font-weight: normal;
-    color: #003366;
-    margin: 0 0 1em 0;
-}
-
-.column2 {
-    display: block;
-    grid-area: main;
-    font-family: "Oswald Bold", "Oswald Light", 'Oswald';
-    color: #003366;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    margin-bottom: 1em;
-}
-
-.main {
-    margin: 0 auto;
-}
 
 /*----------tour divs----------*/
 
@@ -531,12 +552,10 @@ h5 {
     overflow: hidden;
     margin: 0 .5em 1em 0;
     border-radius: 6px;
+    padding: 1rem;
+    margin: 1em;
 }
 
-.responsive {
-    height: auto;
-    padding: .5em;
-}
 
 .responsive:hover {
     -webkit-filter: blur(4px); /* Chrome, Safari, Opera */
@@ -647,38 +666,187 @@ nav ul li a:hover, nav ul li a:focus {
   .shift-travel { display: none; }   /* hide it elsewhere */
 }
 
+/*----------Booking form----------*/
+#form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  border: 2px solid #ff9933;
+  border-radius: 6px;
+}
+
+#form-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ff9933;
+  height: 3em;
+  width: auto;
+  color: #003366;
+  font-family: "Oswald Bold", "Oswald Light", Oswald, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+#t-type {
+  display: inline;
+  align-items: center;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+#t-type-pick {
+  list-style-type: none;
+  display: list-item;
+  color: #003366;
+  font-family: "Oswald Bold", "Oswald Light", Oswald, Helvetica, sans-serif;
+  text-align: left;
+  font-weight: lighter;
+}
+
+#guided {
+  float: right;
+}
+#semiguide {
+  float: right;
+}
+#solo {
+  float: right;
+}
+#pro {
+  float: right;
+}
+#t-name {
+  display: block;
+  height: 3em;
+  padding: .5em;
+  float: right;
+}
+
+#name {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-content: center;
+  padding: 1em;
+}
+
+#fname {
+  display: block;
+  height: 3em;
+  padding: .5em;
+}
+
+#lname {
+  display: block;
+  height: 3em;
+  padding: .5em;
+}
+
+#email {
+  display: block;
+  height: 3em;
+  padding: .5em;
+}
+
+#per-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: .5em;
+}
+
+#depart-f {
+  height: 3em;
+  padding: .5em;
+}
+
+#depart-d {
+  height: 3em;
+  padding: .5em;
+}
+
+#arrive-a {
+  height: 3em;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+#arrive-d {
+  height: 3em;
+  padding: .5em;
+}
+
+#adults {
+  height: 3em;
+  padding: .5em;
+}
+
+#seniors {
+  height: 3em;
+  padding: .5em;
+}
+
+#children {
+  height: 3em;
+  padding: .5em;
+}
+
+label {
+
+  color: #003366;
+  font-family: "Oswald Bold", "Oswald Light", Oswald, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.sub-container {
+  display: block;
+  size: auto;
+  margin: 2em;
+}
+
+.sub-container form input[type="submit"] {
+  display: block;
+  font-family: "Oswald Bold", "Oswald Light", Oswald , Helvetica, "sans-serif";
+  color: white;
+  font-size: 1.5em;
+  margin: 0 auto;
+  background-color: #ff9933;
+  width: 80vw;
+  height: 2em;
+  border-radius: 6px;
+  letter-spacing: 2px;
+}
+
+.sub-container:hover form input[type="submit"] {
+  color: #973901;
+}
+
+/*----------end of booking form----------*/
 
 /*---------Blog styling----------*/
 
 /* Header/Blog Title */
 .heading {
-    grid-area: main;
-    padding: 3px;
-    font-size: 4px;
+    padding: 30px;
+    font-size: 40px;
     text-align: center;
     background: white;
 }
 
-.row {
-    grid-area: main;
-}
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
-.leftcolumn { 
-    grid-area: main;
-    float: left;
-    width: 75%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+.leftcolumn {   
+  float: left;
+  width: 75%;
 }
 
 /* Right column */
 .rightcolumn {
-    grid-area: sider;
-    float: left;
-    width: 25%;
-    padding-left: 20px;
+  float: left;
+  width: 25%;
+  padding-left: 20px;
 }
 
 /* blog images */
@@ -686,17 +854,37 @@ nav ul li a:hover, nav ul li a:focus {
     background-color: #aaa;
     width: 100%;
     padding: 20px;
+    margin-top: 20px;
 }
 
 /* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
     padding: 0;
   }
+  
+  /* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
 }
 /*----------Footer----------*/
 .social-buttons {
